@@ -1,7 +1,11 @@
 process TRIMMOMATIC {
     tag "$sample_id"
     
-    publishDir "${params.output_dir}/trimmomatic", mode: 'copy', enabled: params.organize_output
+    publishDir "${params.output_dir}/trimmomatic", mode: 'copy', enabled: params.organize_output, saveAs: { filename ->
+        if (filename.endsWith("_trimmed.fastq.gz")) "trimmed/$filename"
+        else if (filename.endsWith("_unpaired.fastq.gz")) "unpaired/$filename"
+        else filename
+    }
 
     input:
     tuple val(sample_id), path(reads)
