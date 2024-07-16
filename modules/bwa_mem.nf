@@ -1,7 +1,7 @@
 process BWA_MEM {
     tag "$sample_id"
     
-    publishDir "${params.output_dir}/bwa_mem", mode: 'copy', enabled: params.organize_output
+    publishDir "${params.output}/mapping", mode: 'copy', enabled: params.organize_output
 
     input:
     tuple val(sample_id), path(trimmed_r1), path(trimmed_r2)

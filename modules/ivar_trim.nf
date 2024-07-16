@@ -1,7 +1,7 @@
 process IVAR_TRIM {
     tag "$sample_id"
     
-    publishDir "${params.output_dir}/ivar/ivar_trim", mode: 'copy', enabled: params.organize_output
+    publishDir "${params.output}/ivar/ivar_trim", mode: 'copy', enabled: params.organize_output
 
     input:
     tuple val(sample_id), path(bam_file), path(bam_index)
