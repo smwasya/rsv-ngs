@@ -1,7 +1,7 @@
 process IVAR_CONSENSUS {
     tag "$sample_id"
     
-    publishDir "${params.output_dir}/ivar/ivar_consensus", mode: 'copy', enabled: params.organize_output
+    publishDir "${params.output}/ivar/ivar_consensus", mode: 'copy', enabled: params.organize_output
 
     input:
     tuple val(sample_id), path(trimmed_bam), path(trimmed_bam_index)

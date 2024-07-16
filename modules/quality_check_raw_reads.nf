@@ -1,9 +1,9 @@
 // Define default parameters
-//params.output_dir = 'results'
+//params.output = 'results'
 
 process QUALITY_CHECK_RAW_READS {
     tag "QC on raw reads: ${sample_id}"
-    publishDir "${params.output_dir}/quality_control/fastqc_raw_reads", mode: 'copy'
+    publishDir "${params.output}/quality_control/fastqc_raw_reads", mode: 'copy'
 
     input:
     tuple val(sample_id), path(reads)
@@ -25,7 +25,7 @@ process QUALITY_CHECK_RAW_READS {
 }
 
 process MULTIQC_RAW {
-    publishDir "${params.output_dir}/quality_control/multiqc_raw", mode: 'copy'
+    publishDir "${params.output}/quality_control/multiqc_raw", mode: 'copy'
 
     input:
     path('*_fastqc.zip')

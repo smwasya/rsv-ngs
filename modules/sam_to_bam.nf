@@ -1,7 +1,7 @@
 process SAM_TO_BAM {
     tag "$sample_id"
     
-    publishDir "${params.output_dir}/sam_to_bam", mode: 'copy', enabled: params.organize_output
+    publishDir "${params.output}/sam_to_bam", mode: 'copy', enabled: params.organize_output
 
     input:
     tuple val(sample_id), path(sam_file)
