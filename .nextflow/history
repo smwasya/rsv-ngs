@@ -1,6 +1,0 @@
-2024-07-16 13:24:56	27m 41s	amazing_sanger	OK	7ee0d182807bd0c5529993f068126802	b63373c0-3ccf-494c-a17c-61b77858f33e	nextflow run resvgen --input ../resvgen_smk/data/ --output ../resvgen_smk/analysis/
-2024-07-16 13:55:54	4m 42s	boring_lamport	OK	7ee0d182807bd0c5529993f068126802	4017dafe-3ffe-4fee-8b84-8df0b2875995	nextflow run resvgen --input ../resvgen_smk/data/ --output ../resvgen_smk/analysis/
-2024-07-16 14:06:49	16m 30s	fervent_panini	ERR	fc0b61201658d50b882bc5930f967580	d0e6e317-be83-4134-a851-ef46550f7ff3	nextflow run resvgen --input ../resvgen_smk/data/ --output ../resvgen_smk/analysis/
-2024-07-16 14:44:27	4.3s	wise_engelbart	ERR	fc0b61201658d50b882bc5930f967580	c2101fcb-0e67-46c7-b8a9-595c88bfbbad	nextflow run resvgen --input ../resvgen_smk/data/ --output ../resvgen_smk/analysis/ -with-conda
-2024-07-16 14:45:16	3m 33s	cranky_booth	ERR	fc0b61201658d50b882bc5930f967580	6fd42c9c-eec5-47da-b0ee-c2d05ec7ea26	nextflow run resvgen --input ../resvgen_smk/data/ --output ../resvgen_smk/analysis/
-2024-07-16 16:09:09	4m 3s	admiring_panini	OK	268cad3b78616bd38b85c3d4fd473fe4	12b5e4ac-933c-4dca-8e20-5e84578d20b9	nextflow run resvgen --input ../resvgen_smk/data/ --output ../resvgen_smk/analysis/
