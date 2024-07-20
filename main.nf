@@ -13,7 +13,7 @@ include { IVAR_TRIM } from './modules/ivar_trim'
 include { IVAR_VARIANTS } from './modules/ivar_variants'
 include { IVAR_CONSENSUS } from './modules/ivar_consensus'
 include { MULTIQC_TRIMMED } from './modules/multiqc'
-// include { MOSDEPTH } from './modules/mosdepth'
+include { MOSDEPTH } from './modules/mosdepth'
 
 // Validate input parameters
 if (!params.input || !params.output) {
@@ -45,5 +45,5 @@ workflow {
     IVAR_TRIM(SAM_TO_BAM.out.sorted_bam, params.rsv_scheme)
     IVAR_VARIANTS(IVAR_TRIM.out.trimmed_bam, params.reference)
     IVAR_CONSENSUS(IVAR_TRIM.out.trimmed_bam)
-   // MOSDEPTH(SAM_TO_BAM.out.sorted_bam)
+    MOSDEPTH(SAM_TO_BAM.out.sorted_bam, file(params.mosdepth_regions))
 }
