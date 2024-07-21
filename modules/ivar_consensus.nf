@@ -7,11 +7,11 @@ process IVAR_CONSENSUS {
     tuple val(sample_id), path(trimmed_bam), path(trimmed_bam_index)
 
     output:
-    path "${sample_id}_consensus.fa", emit: consensus
+    path "${sample_id}_genome.fa", emit: consensus
 
     script:
     """
     samtools mpileup -aa -A -d 0 -Q 0 ${trimmed_bam} | \
-    ivar consensus -p ${sample_id}_consensus
+    ivar consensus -p ${sample_id}_genome
     """
 }

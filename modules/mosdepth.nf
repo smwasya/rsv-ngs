@@ -7,6 +7,7 @@ process MOSDEPTH {
     path regions_file
 
     output:
+    tuple val(sample_id), path("${sample_id}.regions.bed.gz"), emit: regions_bed
     tuple val(sample_id), path("${sample_id}*"), emit: mosdepth_output
 
     script:
@@ -16,7 +17,5 @@ process MOSDEPTH {
         --by ${regions_file} \\
         ${sample_id} \\
         ${bam_file}
-
-    
     """
 }

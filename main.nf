@@ -14,6 +14,7 @@ include { IVAR_VARIANTS } from './modules/ivar_variants'
 include { IVAR_CONSENSUS } from './modules/ivar_consensus'
 include { MULTIQC_TRIMMED } from './modules/multiqc'
 include { MOSDEPTH } from './modules/mosdepth'
+include { PLOT_MOSDEPTH_REGIONS } from './modules/plot_mosdepth_regions'
 
 // Validate input parameters
 if (!params.input || !params.output) {
@@ -46,4 +47,9 @@ workflow {
     IVAR_VARIANTS(IVAR_TRIM.out.trimmed_bam, params.reference)
     IVAR_CONSENSUS(IVAR_TRIM.out.trimmed_bam)
     MOSDEPTH(SAM_TO_BAM.out.sorted_bam, file(params.mosdepth_regions))
+    mosdepth_regions_files = MOSDEPTH.out.regions_bed.map { it[1] }.collect()
+    
+    plot_script = file("${projectDir}/scripts/plot_mosdepth_regions.r")
+    
+    PLOT_MOSDEPTH_REGIONS(mosdepth_regions_files, plot_script)
 }
