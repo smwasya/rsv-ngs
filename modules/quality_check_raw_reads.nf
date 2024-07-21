@@ -25,7 +25,7 @@ process QUALITY_CHECK_RAW_READS {
 }
 
 process MULTIQC_RAW {
-    publishDir "${params.output}/quality_control/multiqc_raw", mode: 'copy'
+    publishDir "${params.output}/quality_control/multiqc_raw_reads", mode: 'copy'
 
     input:
     path('*_fastqc.zip')

@@ -1,5 +1,5 @@
 process MULTIQC_TRIMMED {
-    publishDir "${params.output}/quality_control/multiqc_trimmed", mode: 'copy'
+    publishDir "${params.output}/quality_control/multiqc_trimmed_reads", mode: 'copy'
 
     input:
     path('*_fastqc.zip')
