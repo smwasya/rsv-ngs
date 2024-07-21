@@ -1,6 +1,6 @@
 process FASTQC_TRIMMED {
     tag "FASTQC_TRIMMED on ${sample_id}"
-    publishDir "${params.output}/quality_control/fastqc_trimmed", mode: 'copy'
+    publishDir "${params.output}/quality_control/fastqc_trimmed_reads", mode: 'copy'
 
     input:
     tuple val(sample_id), path(read1), path(read2)

@@ -15,6 +15,8 @@ include { IVAR_CONSENSUS } from './modules/ivar_consensus'
 include { MULTIQC_TRIMMED } from './modules/multiqc'
 include { MOSDEPTH } from './modules/mosdepth'
 include { PLOT_MOSDEPTH_REGIONS } from './modules/plot_mosdepth_regions'
+include { PLOT_GENOME_LENGTHS } from './modules/plot_genome_lengths'
+include { MERGE_GENOMES } from './modules/merge_genomes'
 
 // Validate input parameters
 if (!params.input || !params.output) {
@@ -46,10 +48,24 @@ workflow {
     IVAR_TRIM(SAM_TO_BAM.out.sorted_bam, params.rsv_scheme)
     IVAR_VARIANTS(IVAR_TRIM.out.trimmed_bam, params.reference)
     IVAR_CONSENSUS(IVAR_TRIM.out.trimmed_bam)
+
+    consensus_files = IVAR_CONSENSUS.out.consensus.collect()
+    merge_script = file("${projectDir}/scripts/merge_genomes.sh")
+    MERGE_GENOMES(consensus_files, merge_script)
+
     MOSDEPTH(SAM_TO_BAM.out.sorted_bam, file(params.mosdepth_regions))
     mosdepth_regions_files = MOSDEPTH.out.regions_bed.map { it[1] }.collect()
     
     plot_script = file("${projectDir}/scripts/plot_mosdepth_regions.r")
     
     PLOT_MOSDEPTH_REGIONS(mosdepth_regions_files, plot_script)
+
+    
+    consensus_dir = IVAR_CONSENSUS.out.consensus.collect().map { it.parent }
+
+    // Run the genome length analysis
+    plot_genome_script = file("${projectDir}/scripts/plot_genome_lengths.py")
+    PLOT_GENOME_LENGTHS(consensus_dir, plot_genome_script)
+
+    
 }

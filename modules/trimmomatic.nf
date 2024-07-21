@@ -1,5 +1,5 @@
 process TRIMMOMATIC {
-    tag "$sample_id"
+    tag "TRIMMING ADAPTERS FOR SAMPLE: ${sample_id}"
     
     publishDir "${params.output}/trimmomatic", mode: 'copy', enabled: params.organize_output, saveAs: { filename ->
         if (filename.endsWith("_trimmed.fastq.gz")) "trimmed/$filename"
