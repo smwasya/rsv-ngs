@@ -42,18 +42,23 @@ cd resvgen
 
 By default the pipeline currently performs the following;
    #### Preprocessing
-- Sequence Quality Check ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-- Trimming Adapters ([Trimmomatic](https://docs.tinybio.cloud/docs/trimmomatic-tutorial))
-- Post trimming Quality Check ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
+- Sequence Quality Check ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
+- Trimming Adapters ([`Trimmomatic`](https://docs.tinybio.cloud/docs/trimmomatic-tutorial))
+- Post trimming Quality Check ([`FastQC`](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
 
  #### Variant Calling
-  - Read alignment ([BWA-MEM](https://janis.readthedocs.io/en/latest/tools/bioinformatics/bwa/bwamem.html))
-  - Amplicon coverage calculation ([Mosdepth](https://github.com/brentp/mosdepth)) ;
-    Plots using ([custom R script](https://github.com/smwasya/resvgen/blob/main/scripts/plot_mosdepth_regions.r))
-  - Sort and Index alignments ([SAMtools](https://janis.readthedocs.io/en/latest/tools/bioinformatics/bwa/bwamem.html))
-  - Trimming Primers  ([iVar](https://github.com/andersen-lab/ivar))
-  - Calling variants ([iVar variants](https://github.com/andersen-lab/ivar))
-  - Variants Visualization ([Custom R SCript](https://github.com/smwasya/resvgen/blob/main/scripts/plot_genome_lengths.r))
+  - Read alignment ([`BWA-MEM`](https://janis.readthedocs.io/en/latest/tools/bioinformatics/bwa/bwamem.html))
+  - Amplicon coverage calculation ([`Mosdepth`](https://github.com/brentp/mosdepth)) ;
+    Plots using ([`Custom_script.R`](https://github.com/smwasya/resvgen/blob/main/scripts/plot_mosdepth_regions.r))
+  - Sort and Index alignments ([`SAMtools`](https://janis.readthedocs.io/en/latest/tools/bioinformatics/bwa/bwamem.html))
+  - Trimming Primers  ([`iVar`](https://github.com/andersen-lab/ivar))
+  - Calling variants ([`iVar variants`](https://github.com/andersen-lab/ivar))
+  - Variants Visualization ([`Custom_SCript.py`](https://github.com/smwasya/resvgen/tree/main/scripts))
+  - Consensus genome calling ([`iVar`](https://github.com/andersen-lab/ivar))
+  - Genome length Calculation ([`Custom_script.R`](https://github.com/smwasya/resvgen/blob/main/scripts/plot_genome_lengths.r))
+
+##### Clade assignment and lineage classification ([NextClade](https://github.com/nextstrain/nextclade))
+
 
 
 
