@@ -74,9 +74,9 @@ Presents QC reportsand  visualization plots using ([`MultiQC`](http://multiqc.in
 2. Install [`Singularity`](https://www.sylabs.io/guides/3.0/user-guide/) ; Follow the [tutorial](https://singularity-tutorial.github.io/01-installation/)
 3. Download the pipeline and run the command:
 
-   ```bash
+```bash
 nextflow run resvgen -i /path/to/input_dir -o /path/to/output_dir
-   ``` 
+``` 
 
 
 
