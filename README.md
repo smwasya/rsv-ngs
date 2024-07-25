@@ -57,7 +57,7 @@ By default the pipeline currently performs the following;
   - Consensus genome calling ([`iVar`](https://github.com/andersen-lab/ivar))
   - Genome length Calculation ([`Custom_script.R`](https://github.com/smwasya/resvgen/blob/main/scripts/plot_genome_lengths.r))
 
-##### Clade assignment and lineage classification ([NextClade](https://github.com/nextstrain/nextclade))
+##### Clade assignment and lineage classification ([`NextClade`](https://github.com/nextstrain/nextclade))
 
 
 
