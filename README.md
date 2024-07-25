@@ -62,7 +62,8 @@ By default the pipeline currently performs the following;
   - Variants Visualization ([`Custom_SCript.py`](https://github.com/smwasya/resvgen/tree/main/scripts))
   - Consensus genome calling ([`iVar`](https://github.com/andersen-lab/ivar))
   - Genome length Calculation ([`Custom_script.R`](https://github.com/smwasya/resvgen/blob/main/scripts/plot_genome_lengths.r))
-Presents QC reportsand  visualization plots using ([`MultiQC`](http://multiqc.info/))
+
+Presents QC reports and visualization plots using ([`MultiQC`](http://multiqc.info/))
 
 ##### Clade assignment and lineage classification ([`NextClade`](https://github.com/nextstrain/nextclade))
 
