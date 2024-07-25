@@ -26,7 +26,7 @@ The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuri
 
 #### Installation
 ```bash
-git clone https://github.com/your-repo/resvgen.git
+git clone https://github.com/smwasya/resvgen.git
 cd resvgen
 
 ```
