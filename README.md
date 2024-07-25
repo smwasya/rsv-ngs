@@ -30,6 +30,12 @@ git clone https://github.com/your-repo/resvgen.git
 cd resvgen
 
 ```
+##### Running `resvgen` pipeline
+
+```bash
+nexflow run revgen -i /path/to/input_dir/ -o /path/to/output_dir
+```
+The current options available for resvgen are `-i`  to specify the user `input` directory and `-o` for `output` directory
 
 ####
 
