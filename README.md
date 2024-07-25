@@ -38,12 +38,22 @@ cd resvgen
 <!-- ![resvgen_flow_diagram](https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388) -->
 <img src = "https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388" height = "200" width = "800" />
 
+---
+
 By default the pipeline currently performs the following;
-   
+   #### Preprocessing
 - Sequence Quality Check ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-- Trimming Primers ([Trimmomatic](https://docs.tinybio.cloud/docs/trimmomatic-tutorial))
+- Trimming Adapters ([Trimmomatic](https://docs.tinybio.cloud/docs/trimmomatic-tutorial))
 - Post trimming Quality Check ([FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/))
-- 
+
+ #### Variant Calling
+  - Read alignment ([BWA-MEM](https://janis.readthedocs.io/en/latest/tools/bioinformatics/bwa/bwamem.html))
+  - Amplicon coverage calculation ([Mosdepth](https://github.com/brentp/mosdepth)) ;
+    Plots using ([custom R script](https://github.com/smwasya/resvgen/blob/main/scripts/plot_mosdepth_regions.r))
+  - Sort and Index alignments ([SAMtools](https://janis.readthedocs.io/en/latest/tools/bioinformatics/bwa/bwamem.html))
+  - Trimming Primers  ([iVar](https://github.com/andersen-lab/ivar))
+  - Calling variants ([iVar variants](https://github.com/andersen-lab/ivar))
+  - Variants Visualization ([Custom R SCript](https://github.com/smwasya/resvgen/blob/main/scripts/plot_genome_lengths.r))
 
 
 
