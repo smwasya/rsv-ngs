@@ -12,7 +12,7 @@
 
 **resvgen** is an advanced bioinformatics pipeline designed specifically for Respiratory Syncytial Virus (RSV) genomics analysis. This tool is currently optimized to process paired-end Illumina sequencing data, guiding researchers through the entire workflow from raw reads to consensus sequence generation.
 
-The pipeline is implemented using [Nextflow](https://www.nextflow.io/), ensuring portability and scalability across various computational environments.
+The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuring portability and scalability across various computational environments.
 
 #### Features
 1. Specialized for RSV genomics.
@@ -21,8 +21,8 @@ The pipeline is implemented using [Nextflow](https://www.nextflow.io/), ensuring
 4. Utilizes Nextflow for portable and scalable execution.
 
 #### Prerequisites
-1. [Nextflow](https://www.nextflow.io/) (version 24.04 or later).
-2. [Singularity](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html) (for containerized execution)
+1. [`Nextflow`](https://www.nextflow.io/) (version 24.04 or later).
+2. [`Singularity`](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html) (for containerized execution)
 
 #### Installation
 ```bash
