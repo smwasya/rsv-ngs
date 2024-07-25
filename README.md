@@ -62,8 +62,21 @@ By default the pipeline currently performs the following;
   - Variants Visualization ([`Custom_SCript.py`](https://github.com/smwasya/resvgen/tree/main/scripts))
   - Consensus genome calling ([`iVar`](https://github.com/andersen-lab/ivar))
   - Genome length Calculation ([`Custom_script.R`](https://github.com/smwasya/resvgen/blob/main/scripts/plot_genome_lengths.r))
+Presents QC reportsand  visualization plots using ([`MultiQC`](http://multiqc.info/))
 
 ##### Clade assignment and lineage classification ([`NextClade`](https://github.com/nextstrain/nextclade))
+
+----
+
+#### Quick Start
+
+1. Follow steps outline here to install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation)
+2. Install [`Singularity`](https://www.sylabs.io/guides/3.0/user-guide/) ; Follow the [tutorial](https://singularity-tutorial.github.io/01-installation/)
+3. Download the pipeline and run the command:
+
+   ```bash
+nextflow run resvgen -i /path/to/input_dir -o /path/to/output_dir
+   ``` 
 
 
 
