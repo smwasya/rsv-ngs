@@ -76,7 +76,7 @@ Presents QC reports and visualization plots using ([`MultiQC`](http://multiqc.in
 3. Download the pipeline and run the command:
 
 ```bash
-nextflow run resvgen -i /path/to/input_dir -o /path/to/output_dir
+nextflow run resvgen --input /path/to/input_dir --output /path/to/output_dir --platform (illumina|ont) 
 ``` 
 
 
