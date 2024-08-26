@@ -1,0 +1,4 @@
+This primer scheme is for RSV primers that amplify 2500 long bp. It was made by generating pseudo genomes using FASTQ files from representative samples and processing using (https://github.com/jts/ncov2019-artic-nf) with tip variants removed. 
+A guide to pooling volumes to get even coverage is;
+
+

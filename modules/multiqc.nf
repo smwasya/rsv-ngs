@@ -1,11 +1,12 @@
-process MULTIQC {
-    publishDir "${params.output_dir}/multiqc", mode: 'copy'
+process MULTIQC_TRIMMED {
+    publishDir "${params.output}/quality_control/multiqc_trimmed_reads", mode: 'copy'
 
     input:
-    path('*')
+    path('*_fastqc.zip')
 
     output:
     path "multiqc_report.html", emit: report
+    path "multiqc_data", emit: data
 
     script:
     """

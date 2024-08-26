@@ -1,16 +1,16 @@
-process FASTQC {
-    tag "$sample_id"
-    
-    publishDir "${params.output_dir}/fastqc", mode: 'copy', enabled: params.organize_output
+process FASTQC_TRIMMED {
+    tag "FASTQC_TRIMMED on ${sample_id}"
+    publishDir "${params.output}/quality_control/fastqc_trimmed_reads", mode: 'copy'
 
     input:
-    tuple val(sample_id), path(trimmed_r1), path(trimmed_r2)
+    tuple val(sample_id), path(read1), path(read2)
 
     output:
-    path "*_fastqc.{zip,html}", emit: fastqc_results
+    tuple val(sample_id), path("*_fastqc.zip"), emit: zip
+    tuple val(sample_id), path("*_fastqc.html"), emit: html
 
     script:
     """
-    fastqc -t $task.cpus ${trimmed_r1} ${trimmed_r2}
+    fastqc -q ${read1} ${read2}
     """
 }
