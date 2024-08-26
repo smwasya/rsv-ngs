@@ -10,7 +10,7 @@
 ---
 ## Introduction
 
-**resvgen** is an advanced bioinformatics pipeline designed specifically for Respiratory Syncytial Virus (RSV) genomics analysis. This tool is currently optimized to process paired-end Illumina sequencing data, guiding researchers through the entire workflow from raw reads to consensus sequence generation.
+**rsv-ngs** is an advanced bioinformatics pipeline designed specifically for Respiratory Syncytial Virus (RSV) genomics analysis. This tool is currently optimized to process paired-end Illumina sequencing data, guiding researchers through the entire workflow from raw reads to consensus sequence generation.
 
 The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuring portability and scalability across various computational environments.
 
@@ -26,16 +26,16 @@ The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuri
 
 #### Installation
 ```bash
-git clone https://github.com/smwasya/resvgen.git
-cd resvgen
+git clone https://github.com/smwasya/rsv-ngs.git
+cd rsv-ngs
 
 ```
 ##### Running `resvgen` pipeline
 
 ```bash
-nexflow run revgen -i /path/to/input_dir/ -o /path/to/output_dir
+nexflow run rsv-ngs --input /path/to/input_dir/ --output /path/to/output_dir
 ```
-The current options available for resvgen are `-i`  to specify the user `input` directory and `-o` for `output` directory
+The current options available for resvgen are `--input`  to specify the user `input` directory and `--output` for `output` directory
 
 ####
 
@@ -76,7 +76,7 @@ Presents QC reports and visualization plots using ([`MultiQC`](http://multiqc.in
 3. Download the pipeline and run the command:
 
 ```bash
-nextflow run resvgen --input /path/to/input_dir --output /path/to/output_dir --platform (illumina|ont) 
+nextflow run rsv-ngs --input /path/to/input_dir --output /path/to/output_dir --platform (illumina|ont) 
 ``` 
 
 
