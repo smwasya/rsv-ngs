@@ -10,7 +10,7 @@
 ---
 ## Introduction
 
-**rsv-ngs** is an advanced bioinformatics pipeline designed specifically for Respiratory Syncytial Virus (RSV) genomics analysis. This tool is currently optimized to process paired-end Illumina sequencing data, guiding researchers through the entire workflow from raw reads to consensus sequence generation.
+**rsv-ngs** is an advanced bioinformatics pipeline designed specifically for Respiratory Syncytial Virus (RSV) genomics analysis. This tool is currently optimized to process paired-end Illumina and ONT sequencing data, guiding researchers through the entire workflow from raw reads to consensus sequence generation.
 
 The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuring portability and scalability across various computational environments.
 
