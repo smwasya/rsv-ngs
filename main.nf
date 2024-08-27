@@ -66,7 +66,7 @@ workflow ILLUMINA_WORKFLOW {
     // Run MultiQC on FastQC results
     MULTIQC_TRIMMED(FASTQC_TRIMMED.out.zip.map{ it[1] }.collect())
 
-    // Continue with the rest of your workflow
+  
     BWA_MEM(TRIMMOMATIC.out.trimmed_reads, INDEX_REFERENCE.out.index, params.reference)
     SAM_TO_BAM(BWA_MEM.out.sam)
     IVAR_TRIM(SAM_TO_BAM.out.sorted_bam, params.rsv_scheme)
