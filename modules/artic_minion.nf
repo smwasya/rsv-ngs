@@ -18,18 +18,19 @@ process ARTIC_MINION {
     """
     artic minion \
         --medaka \
-        --medaka-model="${medaka_model}" \
+        --medaka-model="$params.medaka_model" \
         --normalise 200 \
-        --threads $task.cpus \
-        --scheme-directory $scheme_dir \
-        --scheme-version $scheme_version \
-        $scheme \
+        --threads 4 \
+        --scheme-directory "$params.scheme_dir" \
+        --scheme-version 1a RSV_SCHEME \
         --read-file $fastq \
         $sample_id
 
-    cat <<-END_VERSIONS > versions.yml
+        cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        artic: \$(artic --version | sed 's/artic //')
+        artic: \$(artic --version 2>&1 | sed 's/artic //')
+        medaka: \$(medaka --version 2>&1 | sed 's/medaka //')
     END_VERSIONS
     """
+    
 }
