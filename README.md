@@ -43,7 +43,9 @@ The current options available for resvgen are `--input`  to specify the user `in
 ## Workflow Overview
 
 <!-- ![resvgen_flow_diagram](https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388) -->
-<img src = "https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388" height = "200" width = "800" />
+<!-- <img src = "https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388" height = "200" width = "800" /> -->
+
+<img src = "https://github.com/user-attachments/assets/0f467dbe-24a4-460f-9343-17c7536ebc78" height = "200" width = "800" />
 
 ---
 
