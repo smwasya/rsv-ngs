@@ -36,7 +36,7 @@ cd rsv-ngs
 ```bash
 nexflow run rsv-ngs --input /path/to/input_dir/ --output /path/to/output_dir --platform (illumina or ont)
 ```
-The current options available for resvgen are `--input`  to specify the user `input` directory and `--output` for `output` directory
+The current options available for rsv-ngs are `--input`  to specify the user `input` directory and `--output` for `output` directory
 
 ####
 
