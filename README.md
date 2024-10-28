@@ -31,7 +31,7 @@ git clone https://github.com/smwasya/rsv-ngs.git
 cd rsv-ngs
 
 ```
-##### Running `resvgen` pipeline
+##### Running `rsv-ngs` pipeline
 
 ```bash
 nexflow run rsv-ngs --input /path/to/input_dir/ --output /path/to/output_dir --platform (illumina or ont)
