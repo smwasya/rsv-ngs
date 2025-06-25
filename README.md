@@ -21,6 +21,17 @@ The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuri
 3. Comprehensive workflow from raw reads to consensus.
 4. Utilizes Nextflow for portable and scalable execution.
 
+
+####
+
+## Workflow Overview
+
+<!-- ![resvgen_flow_diagram](https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388) -->
+<!-- <img src = "https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388" height = "200" width = "800" /> -->
+
+<img src = "https://github.com/user-attachments/assets/0f467dbe-24a4-460f-9343-17c7536ebc78" height = "200" width = "800" />
+
+---
 #### Prerequisites
 1. [`Nextflow`](https://www.nextflow.io/) (version 24.04 or later).
 2. [`Singularity`](https://docs.sylabs.io/guides/3.5/user-guide/introduction.html) (for containerized execution)
@@ -37,17 +48,6 @@ cd rsv-ngs
 nextflow run rsv-ngs --input /path/to/input_dir/ --output /path/to/output_dir --platform (illumina or ont)
 ```
 The current options available for rsv-ngs are `--input`  to specify the user `input` directory and `--output` for `output` directory
-
-####
-
-## Workflow Overview
-
-<!-- ![resvgen_flow_diagram](https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388) -->
-<!-- <img src = "https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388" height = "200" width = "800" /> -->
-
-<img src = "https://github.com/user-attachments/assets/0f467dbe-24a4-460f-9343-17c7536ebc78" height = "200" width = "800" />
-
----
 
 By default the pipeline currently performs the following;
    #### Preprocessing
