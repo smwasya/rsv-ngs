@@ -24,7 +24,7 @@ The pipeline is implemented using [`Nextflow`](https://www.nextflow.io/), ensuri
 
 ####
 
-## Workflow Overview
+## Workflow Overview - Illumina module
 
 <!-- ![resvgen_flow_diagram](https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388) -->
 <!-- <img src = "https://github.com/user-attachments/assets/f6d035e1-6ec3-497b-b6ec-73f7aeffd388" height = "200" width = "800" /> -->
